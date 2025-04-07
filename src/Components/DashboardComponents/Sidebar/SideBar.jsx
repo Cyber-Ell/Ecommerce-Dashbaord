@@ -7,7 +7,7 @@ const SideBar = (props) => {
   return (
     <div>
         <div
-        className={`bg-white shadow-lg transition-all duration-300 ${props.sidebarCollapsed ? "w-20" : "w-64"} fixed h-full z-10`}
+        className={`bg-white shadow-lg transition-all duration-300 ${props.sidebarCollapsed ? "w-20" : "sm:w-64 w-svw"} fixed h-svh z-10`}
       >
         <div className="flex items-center justify-between h-16 px-4 border-b border-gray-100">
           {!props.sidebarCollapsed && (

@@ -24,16 +24,9 @@ const Header = () => {
           }, [notificationsOpen, profileMenuOpen]);
 
   return (
-      <header className="flex items-center justify-between h-16 px-6 bg-white shadow-sm">
+      <header className="flex items-center justify-between h-16 sm:px-6 px-3 bg-white shadow-sm">
           <div className="text-xl font-semibold text-gray-800">Dashboard</div>
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-64 py-2 pl-10 pr-4 text-sm bg-gray-100 border-none rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <i className="absolute text-gray-400 transform -translate-y-1/2 fas fa-search left-3 top-1/4"></i>
-          </div>
+        
           <div className="flex items-center space-x-4">
             <div className="relative">
               <button

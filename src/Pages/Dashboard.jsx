@@ -31,7 +31,7 @@ const Dashboard = () => {
        
         {/* Dashboard Content */}
         <main
-          className={`p-3 ${
+          className={`p-3 w-full ${
             darkMode ? 'bg-gray-800 text-white' : 'bg-gray-100 text-black'
           }`}
         >
