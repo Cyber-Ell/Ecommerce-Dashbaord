@@ -10,11 +10,11 @@ const Cards = () => {
                   <p className="text-sm font-medium text-gray-500">
                     Total Sales
                   </p>
-                  <h3 className="text-2xl font-bold text-gray-800">
-                    $124,563.00
+                  <h3 className="sm:text-2xl md:text-lg text-xl font-bold text-gray-800">
+                    $124,563
                   </h3>
                 </div>
-                <div className="p-3 bg-blue-100 rounded-full">
+                <div className="p-3 flex items-center h-11.5 w-9 justify-center bg-blue-100 rounded-full">
                   <i className="text-blue-800 fas fa-dollar-sign"></i>
                 </div>
               </div>
@@ -22,7 +22,7 @@ const Cards = () => {
                 <span className="flex items-center text-green-500">
                   <i className="mr-1 fas fa-arrow-up"></i> 12.5%
                 </span>
-                <span className="ml-2 text-gray-500">vs last month</span>
+                <span className="ml-2 text-gray-500">vs last   month</span>
               </div>
             </div>
             {/* Daily Revenue Card */}
@@ -32,11 +32,11 @@ const Cards = () => {
                   <p className="text-sm font-medium text-gray-500">
                     Daily Revenue
                   </p>
-                  <h3 className="text-2xl font-bold text-gray-800">
-                    $8,345.00
+                  <h3 className="sm:text-2xl md:text-lg text-xl font-bold text-gray-800">
+                    $8,345
                   </h3>
                 </div>
-                <div className="p-3 bg-green-100 rounded-full">
+                <div className="p-3 flex items-center h-11.5 w-9 justify-center bg-green-100 rounded-full">
                   <i className="text-green-600 fas fa-chart-line"></i>
                 </div>
               </div>
@@ -54,9 +54,9 @@ const Cards = () => {
                   <p className="text-sm font-medium text-gray-500">
                     Total Orders
                   </p>
-                  <h3 className="text-2xl font-bold text-gray-800">1,253</h3>
+                  <h3 className="sm:text-2xl md:text-lg text-xl font-bold text-gray-800">1,253</h3>
                 </div>
-                <div className="p-3 bg-purple-100 rounded-full">
+                <div className="p-3 flex items-center h-11.5 w-9 justify-center bg-purple-100 rounded-full">
                   <i className="text-purple-600 fas fa-shopping-bag"></i>
                 </div>
               </div>
@@ -74,9 +74,9 @@ const Cards = () => {
                   <p className="text-sm font-medium text-gray-500">
                     Avg. Order Value
                   </p>
-                  <h3 className="text-2xl font-bold text-gray-800">$99.42</h3>
+                  <h3 className="sm:text-2xl md:text-lg text-xl font-bold text-gray-800">$99.42</h3>
                 </div>
-                <div className="p-3 bg-yellow-100 rounded-full">
+                <div className="p-3 flex items-center h-11.5 w-9 justify-center bg-yellow-100 rounded-full">
                   <i className="text-yellow-600 fas fa-receipt"></i>
                 </div>
               </div>

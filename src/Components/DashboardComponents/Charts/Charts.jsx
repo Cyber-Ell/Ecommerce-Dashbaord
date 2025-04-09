@@ -309,7 +309,7 @@ const Charts = () => {
                 <h3 className="text-lg font-semibold text-gray-800">
                   Revenue Overview
                 </h3>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center sm:flex-row flex-col space-x-2 gap-2">
                   <button
                     onClick={() => setTimeRange("weekly")}
                     className={`px-3 py-1 text-sm cursor-pointer !rounded-button whitespace-nowrap ${timeRange === "weekly" ? "bg-blue-100 text-blue-800" : "bg-gray-100 text-gray-600"} rounded-md`}
@@ -324,7 +324,7 @@ const Charts = () => {
                   </button>
                 </div>
               </div>
-              <div ref={revenueChartRef} className="w-full h-80">
+              <div ref={revenueChartRef} className="w-full h-80 contain-content">
                 {/* Ensure the chart is initialized */}
               </div>
             </div>
@@ -333,7 +333,7 @@ const Charts = () => {
               <h3 className="mb-6 text-lg font-semibold text-gray-800">
                 Sales Distribution
               </h3>
-              <div ref={distributionChartRef} className="w-full h-80">
+              <div ref={distributionChartRef} className="w-full sm:h-80 h-40 flex items-center">
                 {/* Ensure the chart is initialized */}
               </div>
             </div>

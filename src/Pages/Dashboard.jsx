@@ -7,8 +7,8 @@ import Orders from '../Components/DashboardComponents/RecentOrders/Orders';
 import TopProducts from '../Components/DashboardComponents/TopProducts/TopProducts';
 
 const Dashboard = () => {
-  const [sidebarCollapsed, setSidebarCollapsed] = React.useState(false);
-  const [darkMode, setDarkMode] = React.useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = React.useState(true);
+  const [darkMode, setDarkMode] = React.useState(false);  
 
   // Toggle sidebar collapse
   const toggleSidebar = () => {
@@ -16,7 +16,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className={`${darkMode ? 'dark' : ''}`}>
+    <div className={`${darkMode ? 'dark' : ''} flex h-screen bg  bg-gray-50`}>
       {/* Sidebar */}
       <SideBar sidebarCollapsed={sidebarCollapsed} toggleSidebar={toggleSidebar} />
       {/* Main Content */}
@@ -31,10 +31,7 @@ const Dashboard = () => {
        
         {/* Dashboard Content */}
         <main
-          className={`p-3 w-full ${
-            darkMode ? 'bg-gray-800 text-white' : 'bg-gray-100 text-black'
-          }`}
-        >
+          className="p-6 transition-all duration-300   bg-gray-50">
           {/* Metrics card */}
           <Cards />
           {/* Charts */}

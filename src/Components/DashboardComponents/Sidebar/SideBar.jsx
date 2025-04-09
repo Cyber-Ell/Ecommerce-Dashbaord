@@ -7,7 +7,7 @@ const SideBar = (props) => {
   return (
     <div>
         <div
-        className={`bg-white shadow-lg transition-all duration-300 ${props.sidebarCollapsed ? "w-20" : "sm:w-64 w-svw"} fixed h-svh z-10`}
+        className={`bg-white shadow-lg transition-all duration-300 ${props.sidebarCollapsed ? "sm:w-20 " : "sm:w-64 w-svw"} fixed h-svh z-10`}
       >
         <div className="flex items-center justify-between h-16 px-4 border-b border-gray-100">
           {!props.sidebarCollapsed && (
@@ -33,13 +33,13 @@ const SideBar = (props) => {
                   onClick={() => setActiveTab("dashboard")}
                   className={`flex items-center w-full p-3 transition-colors cursor-pointer !rounded-button whitespace-nowrap ${activeTab === "dashboard" ? "bg-blue-50 text-blue-800" : "text-gray-600 hover:bg-gray-100"} rounded-lg`}
                 >
-                  <i className="fas fa-home text-lg"></i>
+                  <i className="fas fa-home text-lg "></i>
                   {!props.sidebarCollapsed && <span className="ml-4">Dashboard</span>}
                 </button>
               </li>
               <li>
                 <a
-                  href="https://readdy.ai/home/e290ee54-b5a0-401c-bdd8-cb94a3b3f84e/ce8bf8b3-b9c4-4ad4-a83f-2e4d859103e1"
+                  href="#"
                   data-readdy="true"
                   className={`flex items-center w-full p-3 transition-colors cursor-pointer !rounded-button whitespace-nowrap ${activeTab === "products" ? "bg-blue-50 text-blue-800" : "text-gray-600 hover:bg-gray-100"} rounded-lg`}
                   onClick={() => setActiveTab("products")}

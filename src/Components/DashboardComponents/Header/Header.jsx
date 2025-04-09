@@ -39,14 +39,14 @@ const Header = () => {
                 </span>
               </button>
               {notificationsOpen && (
-                <div className="absolute right-0 z-20 w-80 mt-2 overflow-hidden bg-white rounded-lg shadow-lg">
+                <div className="absolute sm:right-0 -right-30  z-20 sm:w-80 w-65 mt-3 overflow-hidden bg-white rounded-lg shadow-2xl">
                   <div className="px-4 py-3 font-medium text-gray-700 border-b border-gray-200">
                     Notifications (3)
                   </div>
                   <div className="max-h-96 overflow-y-auto">
                     <div className="p-4 border-b border-gray-100 hover:bg-gray-50">
-                      <div className="flex">
-                        <div className="flex-shrink-0 p-2 mr-3 bg-blue-100 rounded-full">
+                      <div className="flex ">
+                        <div className="flex-shrink-0 p-2 h-10 w-8 mr-3 flex justify-center items-center bg-blue-100 rounded-full">
                           <i className="text-blue-500 fas fa-shopping-cart"></i>
                         </div>
                         <div className="flex-1">
@@ -68,7 +68,7 @@ const Header = () => {
                     </div>
                     <div className="p-4 border-b border-gray-100 hover:bg-gray-50">
                       <div className="flex">
-                        <div className="flex-shrink-0 p-2 mr-3 bg-green-100 rounded-full">
+                        <div className="flex-shrink-0 p-2 h-10 w-8 flex justify-center items-center mr-3 bg-green-100 rounded-full">
                           <i className="text-green-500 fas fa-dollar-sign"></i>
                         </div>
                         <div className="flex-1">
@@ -90,7 +90,7 @@ const Header = () => {
                     </div>
                     <div className="p-4 hover:bg-gray-50">
                       <div className="flex">
-                        <div className="flex-shrink-0 p-2 mr-3 bg-yellow-100 rounded-full">
+                        <div className="flex-shrink-0 p-2 h-10 w-8 mr-3 flex justify-center bg-yellow-100 rounded-full">
                           <i className="text-yellow-500 fas fa-exclamation-triangle"></i>
                         </div>
                         <div className="flex-1">
