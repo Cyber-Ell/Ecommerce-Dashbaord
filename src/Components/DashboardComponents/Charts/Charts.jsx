@@ -195,7 +195,7 @@ const Charts = () => {
                 trigger: "item",
                 backgroundColor: "rgba(255, 255, 255, 0.9)",
                 borderColor: "#E5E7EB",
-                borderWidth: 1,
+                borderWidth: 0,
                 textStyle: {
                   color: "#374151",
                   fontSize: 12,
@@ -231,8 +231,8 @@ const Charts = () => {
                   radius: ["50%", "70%"],
                   avoidLabelOverlap: false,
                   itemStyle: {
-                    borderRadius: 10,
-                    borderColor: "#fff",
+                    borderRadius: 0,
+                    borderColor: "none",
                     borderWidth: 2,
                     shadowBlur: 10,
                     shadowColor: "rgba(0, 0, 0, 0.1)",
