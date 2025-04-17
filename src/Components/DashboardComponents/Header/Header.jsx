@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 
-const Header = () => {
+const Header = (props) => {
        const [notificationsOpen, setNotificationsOpen] = useState(false);
        const [profileMenuOpen, setProfileMenuOpen] = useState(false);
         
@@ -24,7 +24,7 @@ const Header = () => {
           }, [notificationsOpen, profileMenuOpen]);
 
   return (
-      <header className="flex items-center justify-between h-16 sm:px-6 px-3 bg-white shadow-sm">
+      <header className={`${props.darkMode ? 'bg-black text-amber-50' : ' bg-white ' } flex items-center justify-between h-16 sm:px-6 px-3shadow-sm`}>
           <div className="text-xl font-semibold text-gray-800">Dashboard</div>
         
           <div className="flex items-center space-x-4">
