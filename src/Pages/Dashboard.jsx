@@ -5,10 +5,13 @@ import Cards from '../Components/DashboardComponents/DataCards/Cards';
 import Charts from '../Components/DashboardComponents/Charts/Charts';
 import Orders from '../Components/DashboardComponents/RecentOrders/Orders';
 import TopProducts from '../Components/DashboardComponents/TopProducts/TopProducts';
+import ToggleBtn from '../Components/ThemeBtn/ToggleBtn';
 
 const Dashboard = () => {
   const [sidebarCollapsed, setSidebarCollapsed] = React.useState(true);
   const [darkMode, setDarkMode] = React.useState(false);  
+  
+  console.log(darkMode);
 
   // Toggle sidebar collapse
   const toggleSidebar = () => {
@@ -16,7 +19,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className={`${darkMode ? 'dark' : ''} flex h-screen bg  bg-gray-50`}>
+    <div className={`${darkMode ? 'bg-dark' : ' bg-gray-50'} flex h-screen`}>
       {/* Sidebar */}
       <SideBar sidebarCollapsed={sidebarCollapsed} toggleSidebar={toggleSidebar} />
       {/* Main Content */}
@@ -24,14 +27,22 @@ const Dashboard = () => {
         className={`flex-1 transition-all duration-300 ${
           sidebarCollapsed ? 'ml-20' : 'ml-64'
         }`}
+       
       >
+
         {/* Header */}
-        <Header />
+        <Header darkMode={darkMode} />
         {/* Dark Mode Toggle Button */}
        
         {/* Dashboard Content */}
         <main
           className="p-6 transition-all duration-300   bg-gray-50">
+
+              {/* Dark Mode Toggle Button */}
+              <div className="fixed bottom-5 right-6 z-10">
+              <ToggleBtn  darkMode={darkMode} setDarkMode={setDarkMode} />
+              </div>
+        
           {/* Metrics card */}
           <Cards />
           {/* Charts */}
