@@ -3,13 +3,14 @@ import { useState } from 'react'
 
 const SideBar = (props) => {
         const [activeTab, setActiveTab] = useState("dashboard");
+        const darkMode = props.darkMode; // Assuming darkMode is passed as a prop
 
   return (
     <div>
         <div
-        className={`bg-white shadow-lg transition-all duration-300 ${props.sidebarCollapsed ? "sm:w-20 " : "sm:w-64 w-svw"} fixed h-svh z-10`}
+        className={`${darkMode ? 'bg-gray-800' : 'bg-white' } shadow-lg ${props.sidebarCollapsed ? "sm:w-20 " : "sm:w-64 w-svw"} fixed h-svh z-10`}
       >
-        <div className="flex items-center justify-between h-16 px-4 border-b border-gray-100">
+        <div className="flex items-center justify-between h-16 px-4">
           {!props.sidebarCollapsed && (
             <div className="text-xl font-bold text-blue-800">ShopDash</div>
           )}
@@ -18,7 +19,7 @@ const SideBar = (props) => {
           )}
           <button
             onClick={props.toggleSidebar}
-            className="cursor-pointer !rounded-button whitespace-nowrap p-2 rounded-full hover:bg-gray-100"
+            className={`${darkMode ? 'hover:bg-gray-none ' : 'hover:bg-gray-100' } cursor-pointer !rounded-button whitespace-nowrap p-1 rounded-xl `}
           >
             <i
               className={`fas ${props.sidebarCollapsed ? "fa-chevron-right" : "fa-chevron-left"} text-gray-500`}
@@ -31,7 +32,7 @@ const SideBar = (props) => {
               <li>
                 <button
                   onClick={() => setActiveTab("dashboard")}
-                  className={`flex items-center w-full p-3 transition-colors cursor-pointer !rounded-button whitespace-nowrap ${activeTab === "dashboard" ? "bg-blue-50 text-blue-800" : "text-gray-600 hover:bg-gray-100"} rounded-lg`}
+                  className={` flex items-center w-full p-3 transition-colors cursor-pointer !rounded-button whitespace-nowrap ${activeTab === "dashboard" ? "bg-blue-50 text-blue-800" : " hover:bg-gray-100 text-gray-600"}  rounded-lg`}
                 >
                   <i className="fas fa-home text-lg "></i>
                   {!props.sidebarCollapsed && <span className="ml-4">Dashboard</span>}

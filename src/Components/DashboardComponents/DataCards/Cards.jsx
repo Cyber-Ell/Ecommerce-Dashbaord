@@ -1,16 +1,19 @@
 import React from 'react'
 
-const Cards = () => {
+const Cards = (props) => {
+
+  const darkMode = props.darkMode; // Assuming darkMode is passed as a prop
+
   return (
        <div className="grid grid-cols-1 gap-4 mb-6 sm:grid-cols-2 lg:grid-cols-4">
             {/* Total Sales Card */}
-            <div className="p-6 bg-white rounded-lg shadow-sm">
+            <div className={`${ props.darkMode ? 'bg-gray-800' : 'bg-white'} p-6  rounded-lg shadow-sm`}>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-500">
                     Total Sales
                   </p>
-                  <h3 className="sm:text-2xl md:text-lg text-xl font-bold text-gray-800">
+                  <h3 className={`${darkMode ? 'text-white' : 'text-gray-800' } sm:text-2xl md:text-lg text-xl font-bold`}>
                     $124,563
                   </h3>
                 </div>
@@ -26,13 +29,13 @@ const Cards = () => {
               </div>
             </div>
             {/* Daily Revenue Card */}
-            <div className="p-6 bg-white rounded-lg shadow-sm">
+            <div className={`${ props.darkMode ? 'bg-gray-800' : 'bg-white'} p-6  rounded-lg shadow-sm`}>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-500">
                     Daily Revenue
                   </p>
-                  <h3 className="sm:text-2xl md:text-lg text-xl font-bold text-gray-800">
+                  <h3 className={`${darkMode ? 'text-white' : 'text-gray-800' } sm:text-2xl md:text-lg text-xl font-bold`}>
                     $8,345
                   </h3>
                 </div>
@@ -48,13 +51,13 @@ const Cards = () => {
               </div>
             </div>
             {/* Total Orders Card */}
-            <div className="p-6 bg-white rounded-lg shadow-sm">
+            <div className={`${ props.darkMode ? 'bg-gray-800' : 'bg-white'} p-6  rounded-lg shadow-sm`}>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-500">
                     Total Orders
                   </p>
-                  <h3 className="sm:text-2xl md:text-lg text-xl font-bold text-gray-800">1,253</h3>
+                  <h3 className={`${darkMode ? 'text-white' : 'text-gray-800' } sm:text-2xl md:text-lg text-xl font-bold`}>1,253</h3>
                 </div>
                 <div className="p-3 flex items-center h-11.5 w-9 justify-center bg-purple-100 rounded-full">
                   <i className="text-purple-600 fas fa-shopping-bag"></i>
@@ -68,13 +71,13 @@ const Cards = () => {
               </div>
             </div>
             {/* Average Order Value Card */}
-            <div className="p-6 bg-white rounded-lg shadow-sm">
+            <div className={`${ props.darkMode ? 'bg-gray-800' : 'bg-white'} p-6  rounded-lg shadow-sm`}>
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-gray-500">
+                  <p className="text-gray-500 text-sm font-medium ">
                     Avg. Order Value
                   </p>
-                  <h3 className="sm:text-2xl md:text-lg text-xl font-bold text-gray-800">$99.42</h3>
+                  <h3 className={`${darkMode ? 'text-white' : 'text-gray-800' } sm:text-2xl md:text-lg text-xl font-bold`}>$99.42</h3>
                 </div>
                 <div className="p-3 flex items-center h-11.5 w-9 justify-center bg-yellow-100 rounded-full">
                   <i className="text-yellow-600 fas fa-receipt"></i>

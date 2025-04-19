@@ -1,12 +1,15 @@
 import React from 'react'
 
 
-const TopProducts = () => {
+const TopProducts = (props) => {
+
+  const darkMode = props.darkMode
+
   return (
     <div>
-      <div className="p-6 bg-white rounded-lg shadow-sm">
+      <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} p-6  rounded-lg shadow-sm`}>
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-semibold text-gray-800">
+                <h3 className={`${darkMode ? 'text-white' :' text-gray-800' } mb-6 text-lg font-semibold`}>
                   Top Products
                 </h3>
                 <button className="px-4 py-2 text-sm text-blue-600 bg-blue-50 cursor-pointer !rounded-button whitespace-nowrap hover:bg-blue-100 rounded-md">

@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 
 const Header = (props) => {
        const [notificationsOpen, setNotificationsOpen] = useState(false);
-       const [profileMenuOpen, setProfileMenuOpen] = useState(false);
+       const [profileMenuOpen, setProfileMenuOpen] = useState(false)
+       const darkMode = props.darkMode
         
 
          // Close notifications and profile menu when clicking outside
@@ -24,8 +25,8 @@ const Header = (props) => {
           }, [notificationsOpen, profileMenuOpen]);
 
   return (
-      <header className={`${props.darkMode ? 'bg-black text-amber-50' : ' bg-white ' } flex items-center justify-between h-16 sm:px-6 px-3shadow-sm`}>
-          <div className="text-xl font-semibold text-gray-800">Dashboard</div>
+      <header className={`${darkMode ? 'bg-gray-800 text-white' : ' bg-white ' } flex items-center justify-between h-16 sm:px-6 px-3shadow-sm`}>
+          <div className={`${darkMode ? 'text-white' : ' text-gray-800'} text-xl font-semibold text-gray-800`}>Dashboard</div>
         
           <div className="flex items-center space-x-4">
             <div className="relative">
@@ -39,8 +40,8 @@ const Header = (props) => {
                 </span>
               </button>
               {notificationsOpen && (
-                <div className="absolute sm:right-0 -right-30  z-20 sm:w-80 w-65 mt-3 overflow-hidden bg-white rounded-lg shadow-2xl">
-                  <div className="px-4 py-3 font-medium text-gray-700 border-b border-gray-200">
+                <div className={`${darkMode ? 'bg-gray-800' : ' bg-white'} absolute sm:right-0 -right-30  z-20 sm:w-80 w-65 mt-3 overflow-hidden rounded-lg shadow-2xl`}>
+                  <div className={`${darkMode ? 'text-white' : 'text-gray-700' } px-4 py-3 font-medium  border-b border-gray-200`}>
                     Notifications (3)
                   </div>
                   <div className="max-h-96 overflow-y-auto">
@@ -136,17 +137,17 @@ const Header = (props) => {
                   className="object-cover w-8 h-8 rounded-full"
                 />
                 <div className="ml-2">
-                  <div className="text-sm font-medium text-gray-700">
+                  <div className={`${darkMode ? 'tetx-white' : 'text-gray-700'} text-sm font-medium`}>
                     John Doe
                   </div>
                   <div className="text-xs text-gray-500">Admin</div>
                 </div>
               </div>
               {profileMenuOpen && (
-                <div className="absolute right-0 z-20 w-56 mt-2 overflow-hidden bg-white rounded-lg shadow-lg profile-menu-container">
+                <div className={`${ darkMode ? 'bg-gray-800' : 'bg-white'} absolute right-0 z-20 w-56 mt-2 overflow-hidden  rounded-lg shadow-lg profile-menu-container`}>
                   <div className="py-3 px-4 border-b border-gray-200">
-                    <div className="font-medium text-gray-800">John Doe</div>
-                    <div className="text-xs text-gray-500">
+                    <div className={`${darkMode ? 'text-white' : 'text-gray-800'}font-medium `}>John Doe</div>
+                    <div className={`${darkMode ? 'text-gray-5d00' : 'text-gray-500'} text-xs `}>
                       john.doe@example.com
                     </div>
                   </div>

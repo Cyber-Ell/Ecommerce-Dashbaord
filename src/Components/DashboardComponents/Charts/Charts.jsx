@@ -2,13 +2,14 @@ import React from 'react'
 import { useState, useEffect, useRef } from "react";
 import * as echarts from "echarts";
 
-const Charts = () => {
+const Charts = (props) => {
 
         const [timeRange, setTimeRange] = useState("weekly");
 
 
        // Revenue chart initialization
         const revenueChartRef = useRef(null);
+        const darkMode = props.darkMode
         useEffect(() => {
           if (!revenueChartRef.current) return;
       
@@ -84,14 +85,14 @@ const Charts = () => {
               type: "value",
               splitLine: {
                 lineStyle: {
-                  color: "#F3F4F6",
+                  color: 'none',
                 },
               },
               axisLine: {
                 show: false,
               },
               axisTick: {
-                show: false,
+                show: true,
               },
               axisLabel: {
                 color: "#6B7280",
@@ -164,7 +165,7 @@ const Charts = () => {
                 itemStyle: {
                   color: "#10B981",
                   borderColor: "#fff",
-                  borderWidth: 2,
+                  borderWidth: 1,
                 },
               },
             ],
@@ -304,9 +305,9 @@ const Charts = () => {
   return (
        <div className="grid grid-cols-1 gap-4 mb-6 lg:grid-cols-3">
             {/* Revenue Chart */}
-            <div className="p-6 bg-white rounded-lg shadow-sm lg:col-span-2">
+            <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} p-6  rounded-lg shadow-sm lg:col-span-2`}>
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-semibold text-gray-800">
+                <h3 className={`${darkMode ? 'text-white' :' text-gray-800' } mb-6 text-lg font-semibold`}>
                   Revenue Overview
                 </h3>
                 <div className="flex items-center sm:flex-row flex-col space-x-2 gap-2">
@@ -329,8 +330,8 @@ const Charts = () => {
               </div>
             </div>
             {/* Sales Distribution Chart */}
-            <div className="p-6 bg-white rounded-lg shadow-sm">
-              <h3 className="mb-6 text-lg font-semibold text-gray-800">
+            <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} p-6  rounded-lg shadow-sm`}>
+              <h3 className={`${darkMode ? 'text-white' :' text-gray-800' } mb-6 text-lg font-semibold`}>
                 Sales Distribution
               </h3>
               <div ref={distributionChartRef} className="w-full sm:h-80 h-40 flex items-center">
